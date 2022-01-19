@@ -1,0 +1,149 @@
+.quarterback-wrapper {
+  margin:  0 auto;
+  width: 835px;
+  h2 {
+    padding: 0 0 0 10px;
+    margin: 15px 0 20px 0;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: left; 
+  }
+  h3 {
+    padding: 0 0 0 10px;
+    margin: 15px 0 0 0;
+    font-weight: normal;
+    font-size: 16px;
+    text-align: left;
+  }
+  .quarterback-view {
+    display: block;
+  }  
+  .quarterback-list {
+    width: 100%;
+    border-left: 1px solid #ccc;
+    .quarterbacks {
+      display: flex;
+      .quarterback {
+        background: #ccc;
+        text-align: left;
+        padding: 10px 20px 5px 10px;
+        border: 1px solid #efefef;
+        border-bottom: 0;
+        width: 200px;
+        cursor: pointer;
+        display: flex;
+        &.selected {
+          background: #eee;
+        }
+        .photo {
+          img { 
+            height: 30px; 
+            width: 30px; 
+            border-radius: 50%;
+            border: 1px solid #999;
+            margin: 0;
+          }
+        }
+        .name {
+           padding: 7px 0 0 13px; 
+        }
+      }
+    }
+  }  
+  .quarterback-stats {
+    width: 100%;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #efefef;
+    margin-bottom: 50px;
+
+    .quarterback-stats-wrapper {
+      img {
+          margin-top: 10px;
+      }
+      .quarterback {
+        background-image: linear-gradient(#eee, #ccc);
+        text-align: left;
+        display: flex;
+        height: 150px;
+        position: relative;
+        .player-info {
+          margin-left: 20px;
+          .name {
+            font-size: 30px;
+            margin: 20px 0 0 10px;
+          }
+
+          .quarterback-total {
+            margin: 5px 0 0 10px;
+            background: #fff;
+            border: 1px solid #333;
+            width: 100%;
+            .headers, .data-cells {
+              display: flex;
+            }
+            .headers {
+                background: #eee;
+            }
+            .header, .data-cell {
+              width: 65px;
+              font-size: 12px;
+              padding: 2px;
+            }
+            .header {
+              font-weight: 600;
+            }
+          }
+        }
+
+      }
+     
+      .charts {
+        display: flex;
+        .left {
+          margin: 10px 0 10px 10px;
+          border: 1px solid #333;
+        }
+        .right {
+          margin: 10px;
+          border: 1px solid #333;
+        }
+      }
+      
+      .line-chart {
+          width:400px;
+          background: white;
+          border: 1px solid silver;
+      }
+    }
+
+    .gamelog {
+      .gamelog-wrapper {
+        text-align: left;
+      }
+      .quarterback-total {
+        margin: 5px 0 10px 10px;
+        width: 815px;
+        background: #fff;
+        border: 1px solid #333;
+        
+        .headers, .data-cells {
+          display: flex;
+        } 
+        .headers {
+            background: #eee;
+        }
+        .header, .data-cell {
+          width: 85px;
+          font-size: 12px;
+          padding: 7px 4px 7px 4px;
+          border-bottom: 1px solid silver;
+        }
+        .header {
+          font-weight: 600;
+        }
+      }
+    }  
+  }
+}
