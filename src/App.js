@@ -1,6 +1,5 @@
-import logo from './logo.svg';
-import './App.css';
 import Quarterbacks from './components/Quarterbacks';
+import './styles/quarterback.scss';
 
 function App() {
   return (
