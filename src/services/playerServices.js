@@ -4,11 +4,13 @@ import * as constants from "../constants/playerConstants.js";
 /* get all players */
 const fetchPlayers = async () => {
   try {
-    const results = fetch(`${constants.TRUMEDIA_PROJECT_BASE_URL}/api/nfl/players`, {
-        method: 'get', 
-        headers: new Headers( {'tempToken': constants.API_TOKEN} )
-    });
-    return results;
+    //const results = fetch(`${constants.TRUMEDIA_PROJECT_BASE_URL}/api/nfl/players`, {
+        //method: 'get', 
+        //headers: new Headers( {'tempToken': constants.API_TOKEN} )
+    //});
+    console.log(constants.PLAYERS);
+    return constants.PLAYERS;
+    //return results;
   } catch (err) {
     return `Error: ${err}`;
   }
@@ -16,11 +18,12 @@ const fetchPlayers = async () => {
 
 const fetchPlayer = async (playerId=2543477) => {
   try {
-    const results = fetch(`${constants.TRUMEDIA_PROJECT_BASE_URL}/api/nfl/player/${playerId}`, {
-        method: 'get', 
-        headers: new Headers( {'tempToken': constants.API_TOKEN} )
-    });
-    return results;
+    //const results = fetch(`${constants.TRUMEDIA_PROJECT_BASE_URL}/api/nfl/player/${playerId}`, {
+       // method: 'get', 
+       // headers: new Headers( {'tempToken': constants.API_TOKEN} )
+    //});
+    console.log(constants.BORTLES);
+    return constants.BORTLES;
   } catch (err) {
     return `Error: ${err}`;
   }

@@ -5,6 +5,7 @@ import '../styles/quarterback.scss'
 import QuarterbacksList from "./QuarterbacksList";
 import QuarterbackStats from "./QuarterbackStats";
 import playerServices from "../services/playerServices";
+import * as constants from "../constants/playerConstants.js";
 
 class Quarterbacks extends Component {
   constructor(props) {
@@ -18,6 +19,8 @@ class Quarterbacks extends Component {
   }
 
   componentDidMount = () => {
+    
+    /*
     playerServices
         .fetchPlayers()
         .then((res) => res.json())
@@ -26,7 +29,7 @@ class Quarterbacks extends Component {
       })
       .then(
         (result) => {
-        
+       
         result.map((player, i) => {
           if (i === 0) this._selectQuarterback(player);
         });
@@ -38,14 +41,35 @@ class Quarterbacks extends Component {
 
          (error) => {}
     );
+    */
+
+    constants.PLAYERS.map((player, i) => {
+      if (i === 0) this._selectQuarterback(player);
+    });
+
+    this.setState({
+      quarterbacks: constants.PLAYERS
+    });
   };
 
   _selectQuarterback = (player) => {
+    console.log(player);
+    let playerData = 0;
+    if (player.fullName=="Derek Carr") {
+      playerData = constants.CARR;
+    } else if (player.fullName=="Blake Bortles") {
+      playerData = constants.BORTLES;
+    } else if (player.fullName=="Baker Mayfield") {
+      playerData = constants.MAYFIELD;
+    }
+
     this.setState({
-      selectedQb: player
+      selectedQb: playerData[0],
+      qbStats: playerData
     })
 
     // get stats
+    /*
     playerServices
         .fetchPlayer(player.playerId)
         .then((res) => res.json())
@@ -68,6 +92,15 @@ class Quarterbacks extends Component {
       },
       (error) => {}
     );
+    */
+    playerData.map((week) => {
+      week.YdsPrAtt = week.PsYds / week.Att;
+      week.CmpPcnt = (week.Cmp * 100) / week.Att;
+    });
+
+    this.setState({
+      qbStats: playerData
+    });
   }
 
   render = () => {
