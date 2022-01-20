@@ -53,7 +53,6 @@ class Quarterbacks extends Component {
   };
 
   _selectQuarterback = (player) => {
-    console.log(player);
     let playerData = 0;
     if (player.fullName=="Derek Carr") {
       playerData = constants.CARR;

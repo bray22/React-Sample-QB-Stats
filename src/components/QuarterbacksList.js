@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 
 const QuarterbacksList = ({ quarterbacks, selectPlayer, selectedQb }) => {
-console.log(selectedQb);
+
   return (
     <>
       <div className="quarterbacks">

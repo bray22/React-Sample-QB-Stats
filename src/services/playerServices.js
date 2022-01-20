@@ -8,7 +8,7 @@ const fetchPlayers = async () => {
         //method: 'get', 
         //headers: new Headers( {'tempToken': constants.API_TOKEN} )
     //});
-    console.log(constants.PLAYERS);
+ 
     return constants.PLAYERS;
     //return results;
   } catch (err) {
@@ -22,7 +22,7 @@ const fetchPlayer = async (playerId=2543477) => {
        // method: 'get', 
        // headers: new Headers( {'tempToken': constants.API_TOKEN} )
     //});
-    console.log(constants.BORTLES);
+
     return constants.BORTLES;
   } catch (err) {
     return `Error: ${err}`;

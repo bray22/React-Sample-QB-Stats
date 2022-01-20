@@ -7,7 +7,6 @@ import LineGraph from "./LineGraph";
 
 
 const QuarterbackStats = ({ quarterback, qbStats }) => {
-  console.log(quarterback);
   const chart = useRef();
 
   return (
